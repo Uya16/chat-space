@@ -12,7 +12,7 @@
 - has_many :groups, through: :group_users
 - has_many :messages
 
-## groupテーブル
+## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |groupname|string|null: false|
