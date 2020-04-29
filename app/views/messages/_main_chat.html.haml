@@ -1,0 +1,37 @@
+.chat-main
+  .chat-main__group-info
+    .chat-main__group-info__box
+      .chat-main__group-info__box__name
+        test
+      .chat-main__group-info__box__member-list
+        Member : masa
+    .chat-main__group-info__edit-btn
+      = link_to 'Edit', '#'
+
+  .chat-main__message-list
+    .chat-main__message-list__box
+      .chat-main__message-list__box__info
+        .chat-main__message-list__box__info__user
+          masa
+        .chat-main__message-list__box__info__date
+          2020/4/27/(Mon) 18:00:00
+      .chat-main__message-list__box__text
+        メッセージ
+
+    .chat-main__message-list__box
+      .chat-main__message-list__box__info
+        .chat-main__message-list__box__info__user
+          masa
+        .chat-main__message-list__box__info__date
+          2020/4/27/(Mon) 18:00:00
+      .chat-main__message-list__box__text
+        メッセージ
+
+  .chat-main__message-form
+    .chat-main__message-form__new-message
+      .chat-main__message-form__new-message__box
+        %input.chat-main__message-form__new-message__box__text{type: "text", placeholder: "type a message"}
+        %label.chat-main__message-form__new-message__box__image
+          = icon('far', 'image')
+          %input.chat-main__message-form__new-message__box__image__file{type: "file"}
+      %input.chat-main__message-form__new-message__send-btn{type: "submit", value: "Send"}
