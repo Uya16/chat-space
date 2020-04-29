@@ -1,33 +1,20 @@
 .side-bar 
   .side-bar__username
     .side-bar__username__top-items
-      .side-bar__username__top-items__name
-        masa
+      %h3.side-bar__username__top-items__name
+        = current_user.name
       .side-bar__username__top-items__icons
-        .side-bar__username__top-items__icons__edit
-          = link_to "#", class: "side-bar__btn" do
+        %i.side-bar__username__top-items__icons__edit
+          = link_to new_group_path do
             = icon('fas', 'edit')
-        .side-bar__username__top-items__icons__cog
-          = link_to "#", class: "side-bar__btn" do
+        %i.side-bar__username__top-items__icons__cog
+          = link_to edit_user_path(current_user) do
             = icon('fas', 'cog')
   .side-bar__group-list
-    .side-bar__group-list__group-name
-      techcamp1
-    .side-bar__group-list__new-message
-      まだメッセージがありません
-
-    .side-bar__group-list__group-name
-      techcamp2
-    .side-bar__group-list__new-message
-      まだメッセージがありません
-
-    .side-bar__group-list__group-name
-      techcamp3
-    .side-bar__group-list__new-message
-      まだメッセージがありません
-
-    .side-bar__group-list__group-name
-      techcamp4
-    .side-bar__group-list__new-message
-      まだメッセージがありません
-
+    - current_user.groups.each do |group|
+      .group
+        = link_to group_messages_path(group), class: "side-bar__group-list__link" do
+          .side-bar__group-list__link__group-name
+            = group.name
+          .side-bar__group-list__link__new-message
+            メッセージはまだありません
