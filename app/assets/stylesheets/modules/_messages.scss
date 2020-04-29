@@ -170,14 +170,20 @@
     font-weight: bold;
     padding: 0px 20px;
 
-    &__group-name {
-      font-size: 15px;
-      padding: 20px 0px 5px;
-    }
+    &__link{
+      color: #ffffff;
+      text-decoration: none;
 
-    &__new-message {
-      font-size: 11px;
-      margin-bottom: 40px;
+      &__group-name {
+        font-size: 15px;
+        padding: 20px 0px 5px;
+      }
+
+      &__new-message{
+        font-size: 11px;
+        margin-bottom: 40px;
+      }
     }
   }
 }
+
