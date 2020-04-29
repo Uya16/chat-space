@@ -46,36 +46,6 @@
     }
   }
 
-  &__message-list {
-    background-color: #fafafa;
-    height: calc(100vh - 100px - 90px);
-    padding-left: 40px;
-
-    &__box {
-      padding: 35px 0px 46px;
-
-      &__info {
-        margin-bottom: 12px;
-        display: flex;
-
-        &__user {
-          font-size: 16px;
-          color: #333333;
-        }
-
-        &__date {
-          margin-left: 5px;
-          font-size: 12px;
-          color: #999999;
-        }
-      }
-      
-      &__text {
-        font-size: 14px;
-        color: #434A54;
-      }
-    }
-  }
 
   &__message-form {
     background-color: #d2d2d2;
@@ -101,29 +71,67 @@
           border-style: none;
           padding: 0px 40px 0px 10px;
         }
+        
 
-        &__image {
-          position: absolute;
-          top: 10px;
-          right: 10px;
+        &__mask {
+          &__image {
+            position: absolute;
+            top: 10px;
+            right: 10px;
 
-          &__file {
-            display: none;
+            &__icon{
+            }
+
+            &__file {
+              display: none;
+            }
           }
         }
-      }
 
-      &__send-btn {
-        background-color: #38aef0;
-        width: 100px;
-        height: 50px;
-        line-height: 50px;
-        color: #ffffff;
-        margin-left: 15px;
+        &__send-btn {
+          background-color: #38aef0;
+          width: 100px;
+          height: 50px;
+          line-height: 50px;
+          color: #ffffff;
+          margin-left: 15px;
+        }
       }
     }
   }
 }
+
+.message-list {
+  background-color: #fafafa;
+  height: calc(100vh - 100px - 90px);
+  padding-left: 40px;
+
+  &__box {
+    padding: 35px 0px 46px;
+
+    &__info {
+      margin-bottom: 12px;
+      display: flex;
+
+      &__user {
+        font-size: 16px;
+        color: #333333;
+      }
+
+      &__date {
+        margin-left: 5px;
+        font-size: 12px;
+        color: #999999;
+      }
+    }
+    
+    &__text {
+      font-size: 14px;
+      color: #434A54;
+    }
+  }
+}
+
 
 .side-bar {
   background-color: #253141;
